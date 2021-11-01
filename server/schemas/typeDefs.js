@@ -26,14 +26,14 @@ const typeDefs = gql`
         friendCount: Int
         thoughts: [Thought]
         friends: [User]
-    }
-
+      }
+      
     type Query {
         users: [User]
         user(username: String!): User
         thoughts(username: String): [Thought]
         thought(_id: ID!): Thought
-    }
+      }
 `;
 
 // export the typeDefs

@@ -18,15 +18,14 @@ const resolvers = {
                 .populate('friends')
                 .populate('thoughts');
         },
-
         // get a user by username
         user: async (parent, { username }) => {
             return User.findOne({ username })
                 .select('-__v -password')
-                .poulate('friends')
+                .populate('friends')
                 .populate('thoughts');
-        }
-    }
+        },
+            }
 };
 
 module.exports = resolvers;
